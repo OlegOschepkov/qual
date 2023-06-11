@@ -1,0 +1,57 @@
+.socials {
+  @include reset-list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 46px;
+  margin-right: 40px;
+  border-right: 1px solid $color-silver-light;
+  gap: 38px;
+
+  &:last-of-type:not(:only-of-type) {
+    margin-right: 0;
+    padding-right: 0;
+    border: none;
+  }
+
+  @include vp--767 {
+    gap: 30px;
+    flex-wrap: wrap;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color-silver-light;
+
+    &:last-of-type:not(:only-of-type) {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    svg {
+      min-width: 20px;
+      margin-right: 11px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    transition: color $trans--300;
+    user-select: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: $color-default-white;
+  }
+}

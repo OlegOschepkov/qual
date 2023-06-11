@@ -1,0 +1,8 @@
+mixin button({text, iconId, iconWidth, iconHeight, type = 'button'} = {})
+  if !iconId
+    button.button(class!=attributes.class, type=type)&attributes(attributes) !{text}
+
+  if iconId
+    button.button(class!=attributes.class, type=type)&attributes(attributes)
+      +icon(iconId, iconWidth, iconHeight).link__icon
+      | #{text}

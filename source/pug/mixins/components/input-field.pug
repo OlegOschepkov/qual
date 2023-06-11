@@ -1,0 +1,15 @@
+mixin input-field({name, text, type = "text", placeholder, isRequired, labelText = "Имя поля", dataValidate, autocomplete="off", iconId, iconWidth = 20, iconHeight = 20} = {})
+  .input-field(class=type!="file" ? "" : 'input-field--file')&attributes(attributes)
+    if (type!=="file")
+      label.input-label(class="visually-hidden" for=name)!=labelText
+      input(type = type, placeholder = placeholder, value = text, readonly = isReadonly, required = isRequired, id=name, name=name, data-validate = dataValidate, autocomplete=autocomplete)&attributes(
+        attributes)
+      if iconId
+        +icon(iconId, iconWidth, iconHeight)
+    else
+      label.input-label(for=name)
+        span.input-label__text!=labelText
+        input(type = type, placeholder = placeholder, value = text, readonly = isReadonly, required = isRequired, id=name, name=name, data-validate = dataValidate, autocomplete=autocomplete)&attributes(
+          attributes)
+        if iconId
+          +icon(iconId, iconWidth, iconHeight)

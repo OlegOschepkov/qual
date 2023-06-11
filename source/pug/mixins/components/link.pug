@@ -1,0 +1,8 @@
+mixin link({text, iconId, iconWidth, iconHeight, href = '#'} = {})
+  if !iconId
+    a.link(class!=attributes.class, href=href) !{text}
+
+  if iconId
+    a.link(class!=attributes.class, href=href)
+      +icon(iconId, iconWidth, iconHeight).link__icon
+      | #{text}

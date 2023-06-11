@@ -1,0 +1,7 @@
+mixin header(headerMods, currentPage)
+  header.header(class=headerMods, data-header)
+    .container.header__wrapper
+      +logo()
+      button.header__toggle.button(type="button" aria-label="Переключатель отображения меню" data-show-menu)
+        span
+      +headerNav(currentPage)

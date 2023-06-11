@@ -1,0 +1,76 @@
+.ss-content {
+  background-color: rgba(39, 39, 51, 1);
+  border: 1px solid $color-bright-grey;
+  border-radius: 0 0 3px 3px;
+  overflow: hidden;
+}
+
+.ss-content .ss-list {
+  background-color: rgba(39, 39, 51, 0.9);
+  border-radius: 0 0 3px 3px;
+  height: 180px;
+  position: relative;
+}
+
+.ss-content .ss-list .ss-option {
+  color: $color-default-white;
+
+  @include hover-focus {
+    background-color: transparent;
+    color: $color-picton;
+  }
+}
+
+.ss-arrow path {
+  transition: stroke $trans--300;
+}
+
+.ss-main {
+  transition: background-color $trans--300, color $trans--300, border $trans--300;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  @include hover-focus {
+    background: rgba(61, 64, 80, 0.85);
+    color: $color-default-white;
+    border: 1px solid $color-bright-grey;
+
+    .ss-arrow path {
+      stroke: $color-default-white;
+    }
+
+    .ss-values .ss-placeholder {
+      color: $color-default-white;
+    }
+  }
+}
+
+.ss-main.ss-open-below {
+  background: rgba(61, 64, 80, 0.85);
+  border: 1px solid $color-bright-grey;
+  border-radius: 3px 3px 0 0;
+  color: $color-default-white;
+
+  .ss-arrow path {
+    stroke: $color-default-white;
+  }
+
+  .ss-values .ss-placeholder {
+    color: $color-default-white;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.ss-main .ss-values .ss-placeholder {
+  padding: 12px 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-charade;
+  transition: color $trans--300;
+}

@@ -1,0 +1,19 @@
+mixin footer(currentPage)
+  footer.footer(class=footerMods)
+    .container
+      .footer__wrapper
+        p.footer__copyright &copy;&nbsp;2018 &laquo;LOREMIPSUM.NET&raquo; Все права защищены.
+
+        ul.socials
+          each item in paysystems
+            li.socials__item
+              span.socials__link
+                +icon(item.id, 20, 18)
+                !=item.text
+
+        ul.socials.socials--contacts
+          each item in contacts
+            li.socials__item
+              a.socials__link.link(href!= item.href, aria-label!= item.text, target="_blank", rel="nofollow noopener")
+                +icon(item.id, 20, 18)
+                !=item.text

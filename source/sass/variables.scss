@@ -1,0 +1,56 @@
+// Colors
+//---------------------------------
+
+$color-vulcan:                     #10101D;
+$color-havelock:                   #3E9CDC;
+$color-jelly:                      #286690;
+$color-picton:                     #43ABF0;
+$color-shark:                      #2A2B30;
+$color-charade:                    #272733;
+$color-bright-grey:                #3D4050;
+$color-silver:                     #BBBBBB;
+$color-silver-light:               #C3C3C3;
+$color-storm:                      #6F6D7B;
+
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+// Gradient
+
+$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+// Typography
+//---------------------------------
+
+$font-family--main:                 "Lato", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$trans--300:                        0.3s ease;
+$trans--600:                        0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+//---------------------------------
+
+$vp--768:                           768px;
+$vp--1024:                          1024px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
+
+// коэффициент уменьшения
+//---------------------------------
+
+$reduction-ratio:                   0.7;
+
+// Высота без учета bar в android, ios
+$height100vh: calc(var(--vh, 1vh) * 100);

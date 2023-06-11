@@ -1,0 +1,6 @@
+mixin select(data)
+  select(name=data.name, data-select, data-placeholder-text=data.placeholder)
+    each item in data.options
+      -
+        var placeholder = item.placeholder ? "true" : false;
+      option(value=item.value, selected=item.selected, data-placeholder=placeholder)!=item.text

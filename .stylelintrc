@@ -1,0 +1,17 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [
+      2,
+      {
+        "ignore": [
+          "inside-parens"
+        ]
+      }
+    ],
+    "at-rule-no-unknown": null,
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always"
+  }
+}

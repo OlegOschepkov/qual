@@ -1,0 +1,8 @@
+mixin logo(width, height, {alt = "логотип Тестового", name = "logo"} = {})
+  if (currentPage == "main")
+    .logo(class!=attributes.class)
+      +icon("logo", 247, 35)
+  else
+    a.link.link--hover-opacity(href="main.html")
+      .logo(class!=attributes.class)
+        +icon("logo", 247, 35)
