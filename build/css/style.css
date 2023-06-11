@@ -401,6 +401,7 @@ template {
 .ps__rail-x {
   display: none;
   opacity: 0;
+  -o-transition: background-color .2s linear, opacity .2s linear;
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
   height: 15px;
@@ -413,6 +414,7 @@ template {
 .ps__rail-y {
   display: none;
   opacity: 0;
+  -o-transition: background-color .2s linear, opacity .2s linear;
   transition: background-color .2s linear, opacity .2s linear;
   -webkit-transition: background-color .2s linear, opacity .2s linear;
   width: 15px;
@@ -454,6 +456,7 @@ template {
 .ps__thumb-x {
   background-color: #aaa;
   border-radius: 6px;
+  -o-transition: background-color .2s linear, height .2s ease-in-out;
   transition: background-color .2s linear, height .2s ease-in-out;
   -webkit-transition: background-color .2s linear, height .2s ease-in-out;
   height: 6px;
@@ -466,6 +469,7 @@ template {
 .ps__thumb-y {
   background-color: #aaa;
   border-radius: 6px;
+  -o-transition: background-color .2s linear, width .2s ease-in-out;
   transition: background-color .2s linear, width .2s ease-in-out;
   -webkit-transition: background-color .2s linear, width .2s ease-in-out;
   width: 6px;
@@ -596,6 +600,7 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: background-color var(--ss-animation-timing);
+  -o-transition: background-color var(--ss-animation-timing);
   transition: background-color var(--ss-animation-timing);
   overflow: hidden;
 }
@@ -644,6 +649,7 @@ template {
   width: 100%;
   color: var(--ss-font-placeholder-color);
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -774,8 +780,10 @@ template {
   stroke-linecap: round;
   stroke-linejoin: round;
   -webkit-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   -webkit-transition: var(--ss-animation-timing);
+  -o-transition: var(--ss-animation-timing);
   transition: var(--ss-animation-timing);
 }
 
@@ -792,12 +800,15 @@ template {
   background-color: var(--ss-bg-color);
   -webkit-transition: opacity var(--ss-animation-timing), -webkit-transform var(--ss-animation-timing);
   transition: opacity var(--ss-animation-timing), -webkit-transform var(--ss-animation-timing);
+  -o-transition: transform var(--ss-animation-timing), opacity var(--ss-animation-timing);
   transition: transform var(--ss-animation-timing), opacity var(--ss-animation-timing);
   transition: transform var(--ss-animation-timing), opacity var(--ss-animation-timing), -webkit-transform var(--ss-animation-timing);
   opacity: 0;
   -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: center top;
+  -ms-transform-origin: center top;
   transform-origin: center top;
   overflow: hidden;
   z-index: 10000;
@@ -812,8 +823,10 @@ template {
   flex-direction: column-reverse;
   opacity: 1;
   -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
   transform: scaleY(1);
   -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
   transform-origin: center bottom;
   border-top-left-radius: var(--ss-border-radius);
   border-top-right-radius: var(--ss-border-radius);
@@ -822,8 +835,10 @@ template {
 .ss-content.ss-open-below {
   opacity: 1;
   -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
   transform: scaleY(1);
   -webkit-transform-origin: center top;
+  -ms-transform-origin: center top;
   transform-origin: center top;
   border-bottom-left-radius: var(--ss-border-radius);
   border-bottom-right-radius: var(--ss-border-radius);
@@ -1028,8 +1043,10 @@ template {
   stroke-linecap: round;
   stroke-linejoin: round;
   -webkit-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   -webkit-transition: var(--ss-animation-timing);
+  -o-transition: var(--ss-animation-timing);
   transition: var(--ss-animation-timing);
 }
 
@@ -1167,6 +1184,7 @@ template {
   -webkit-transition: transform 0.3s;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
@@ -1355,11 +1373,13 @@ template {
 
 .noUi-value-horizontal {
   -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
 }
 
 .noUi-rtl .noUi-value-horizontal {
   -webkit-transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
 }
 
@@ -1390,12 +1410,14 @@ template {
 
 .noUi-value-vertical {
   -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   padding-left: 25px;
 }
 
 .noUi-rtl .noUi-value-vertical {
   -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
   transform: translate(0, 50%);
 }
 
@@ -1427,6 +1449,7 @@ template {
 
 .noUi-horizontal .noUi-tooltip {
   -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   left: 50%;
   bottom: 120%;
@@ -1434,6 +1457,7 @@ template {
 
 .noUi-vertical .noUi-tooltip {
   -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
   top: 50%;
   right: 120%;
@@ -1441,6 +1465,7 @@ template {
 
 .noUi-horizontal .noUi-origin > .noUi-tooltip {
   -webkit-transform: translate(50%, 0);
+  -ms-transform: translate(50%, 0);
   transform: translate(50%, 0);
   left: auto;
   bottom: 10px;
@@ -1448,6 +1473,7 @@ template {
 
 .noUi-vertical .noUi-origin > .noUi-tooltip {
   -webkit-transform: translate(0, -18px);
+  -ms-transform: translate(0, -18px);
   transform: translate(0, -18px);
   top: auto;
   right: 28px;
@@ -1682,6 +1708,7 @@ button,
   cursor: pointer;
   -webkit-transition: border 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: border 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   -webkit-tap-highlight-color: transparent;
@@ -1704,6 +1731,7 @@ button,
   -webkit-box-shadow: 0 7px 7px -5px #43ABF0;
   box-shadow: 0 7px 7px -5px #43ABF0;
   -webkit-transform: translateY(-0.25em);
+  -ms-transform: translateY(-0.25em);
   transform: translateY(-0.25em);
 }
 
@@ -1713,6 +1741,7 @@ button,
   border: 1px solid #ffffff;
   -webkit-transition: border 0.1s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: border 0.1s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.1s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.1s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.1s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
@@ -1729,6 +1758,7 @@ button,
   align-items: center;
   cursor: pointer;
   -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1756,9 +1786,11 @@ button,
   height: 3px;
   background-color: #C3C3C3;
   -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
@@ -1774,12 +1806,14 @@ button,
 
 .link.focus-visible:focus::before {
   -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
   transform: scaleX(1);
 }
 
 .link--logo {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 
@@ -1913,6 +1947,7 @@ button,
   border: 1px solid #ffffff;
   background: rgba(255, 255, 255, 0.85);
   -webkit-transition: border 0.3s ease, color 0.3s ease;
+  -o-transition: border 0.3s ease, color 0.3s ease;
   transition: border 0.3s ease, color 0.3s ease;
 }
 
@@ -1941,6 +1976,7 @@ button,
 
 .input-field--file .input-label__text {
   -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   position: relative;
   z-index: 2;
@@ -1972,8 +2008,10 @@ button,
   top: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
   transform: translateX(-50%) translateY(-50%) rotate(-25deg);
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   width: 150%;
   z-index: 1;
@@ -1986,6 +2024,7 @@ button,
   z-index: 2;
   fill: #272733;
   -webkit-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
 }
 
@@ -2026,11 +2065,13 @@ button,
 
 .ss-arrow path {
   -webkit-transition: stroke 0.3s ease;
+  -o-transition: stroke 0.3s ease;
   transition: stroke 0.3s ease;
 }
 
 .ss-main {
   -webkit-transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
@@ -2080,6 +2121,7 @@ button,
   line-height: 22px;
   color: #272733;
   -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
@@ -2159,6 +2201,7 @@ button,
   height: 2px;
   width: 100%;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -2167,21 +2210,25 @@ button,
   -webkit-box-shadow: 0 0 8px 0 #43ABF0;
   box-shadow: 0 0 8px 0 #43ABF0;
   -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
 .header__toggle.is-active:before {
   -webkit-transform: translateY(10px) rotate(135deg);
+  -ms-transform: translateY(10px) rotate(135deg);
   transform: translateY(10px) rotate(135deg);
 }
 
 .header__toggle.is-active:after {
   -webkit-transform: translateY(-10px) rotate(-135deg);
+  -ms-transform: translateY(-10px) rotate(-135deg);
   transform: translateY(-10px) rotate(-135deg);
 }
 
 .header__toggle.is-active span {
   -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
 }
 
@@ -2280,6 +2327,7 @@ button,
   left: 10px;
   top: 50%;
   -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 1px;
   width: 5px;
@@ -2532,6 +2580,7 @@ button,
   display: inline-flex;
   align-items: center;
   -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2582,6 +2631,7 @@ button,
     max-height: 0;
     overflow: hidden;
     -webkit-transition: max-height 0.3s ease;
+    -o-transition: max-height 0.3s ease;
     transition: max-height 0.3s ease;
   }
 
@@ -2733,6 +2783,7 @@ button,
     -webkit-box-shadow: 0 7px 7px -5px #43ABF0;
     box-shadow: 0 7px 7px -5px #43ABF0;
     -webkit-transform: translateY(-0.25em);
+    -ms-transform: translateY(-0.25em);
     transform: translateY(-0.25em);
   }
 
@@ -2748,6 +2799,7 @@ button,
 
   .link:hover:not(.focus-visible)::before {
     -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
     transform: scaleX(1);
   }
 
@@ -2795,6 +2847,7 @@ button,
     -webkit-box-shadow: 0 0 8px 0 #43ABF0;
     box-shadow: 0 0 8px 0 #43ABF0;
     -webkit-transform: none;
+    -ms-transform: none;
     transform: none;
   }
 

@@ -8,13 +8,13 @@ const initSelects = () => {
   selects.forEach((select) => {
     const placeholder = select.dataset.placeholderText;
     new SlimSelect({
-      select: select,
+      select,
       settings: {
         showSearch: false,
         placeholderText: placeholder,
-      }
-    })
-  })
+      },
+    });
+  });
 };
 
 export {initSelects};

@@ -23,7 +23,7 @@ const initMenu = () => {
       menu.style.maxHeight = ``;
       ps.destroy();
     }
-  })
+  });
 };
 
 export {initMenu};
