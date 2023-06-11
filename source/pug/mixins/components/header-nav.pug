@@ -1,4 +1,0 @@
-mixin headerNav(currentPage)
-  nav.header-nav(data-menu)
-    each link in headerNav
-      +link({text: link.text, href: link.href})(class!= currentPage === link.page ? "active" : "").link--uppercase
